@@ -8,22 +8,15 @@
 function fizzBuzz(lower, upper) {
   //array of lower to upper (inclusive)
   const array = Array(upper - lower + 1)
-    .fill()
-    .map((_, idx) => lower + idx);
-  //set input variables
-  const val1 = 3;
-  const val2 = 5;
-  //set output variables
-  const strOne = "Fizz";
-  const strTwo = "Buzz";
-  const strThree = "FizzBuzz";
-  //replace elements with string
+    .fill() //static elements
+    .map((_, i) => lower + i); //elements in array lower -> upper
+  //FizzBuzz logic
   for (let i = 0; i < array.length; i++) {
-    if (array[i] % val1 === 0 && array[i] % val2 !== 0 && array[i] !== 0)
-      array[i] = strOne;
-    if (array[i] % val2 === 0 && array[i] % val1 !== 0 && array[i] !== 0)
-      array[i] = strTwo;
-    if (array[i] % (val1 * val2) === 0 && array[i] > 0) array[i] = strThree;
+    if (array[i] % 3 === 0 && array[i] % 5 !== 0 && array[i] !== 0)
+      array[i] = "Fizz";
+    if (array[i] % 5 === 0 && array[i] % 3 !== 0 && array[i] !== 0)
+      array[i] = "Buzz";
+    if (array[i] % 15 === 0 && array[i] > 0) array[i] = "FizzBuzz";
   }
   return array;
 }
