@@ -1,4 +1,5 @@
 // TODO: Write your function in this file
+
 function fizzBuzz(lower, upper) {
     const array = []
     for (let i = lower; i <= upper; i ++) {
@@ -18,5 +19,7 @@ function fizzBuzz(lower, upper) {
      }
   
     console.log (fizzBuzz(1,100))
+
 // TODO: Change undefined below to the name of your function
+
 module.exports = fizzBuzz
