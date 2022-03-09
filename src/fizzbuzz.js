@@ -4,6 +4,8 @@ function createFizzBuzz (lower, upper) {
     
     for (let i = lower; i <= upper; i++) {
 
+    console.log(i, i % 3, i % 5)
+    
         if (i % 3 === 0 && i % 5 === 0) {
             outputArray.push("FizzBuzz")
         } else if (i % 5 === 0) {
