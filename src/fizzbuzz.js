@@ -4,12 +4,14 @@ function createFizzBuzz (lower, upper) {
     for (let i = lower; i <= upper; i++) {
         outputArray.push(i)
 
-        if (lower % 3) {
-            return ("Fizz")
-        } else if (lower % 5) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            return ("Fizzbuzz")
+        } else if (i % 5 === 0) {
             return ("Buzz")
-        } else (lower % 3 && lower % 5) {
-            return ("FizzBuzz")
+        } else if (i % 3 === 0) {
+            return ("Fizz")
+        } else {
+            return (i)
         }
     } return outputArray;
 }
