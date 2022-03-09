@@ -3,37 +3,24 @@
 const fizzBomb = (lowNum, upperNum) => {
   const arrayNumbers = [];
   const range = upperNum - lowNum;
+  const divisorArray = [15, 3, 5];
+  const wordReplaceArray = ["FizzBuzz", "Fizz", "Buzz"];
   for (let j = 0; j < range; j++) {
     arrayNumbers.push(lowNum + j);
   }
   arrayNumbers.push(upperNum);
 
-  for (let j = 0; j < arrayNumbers.length; j++) {
-    console.log(j);
-    if (arrayNumbers[j] % 15 === 0) {
-      console.log("inside loop");
-      arrayNumbers.splice(j, 1, "FizzBuzz");
+  for (let i = 0; i < divisorArray.length; i++) {
+    for (let j = 0; j < arrayNumbers.length; j++) {
+      if (arrayNumbers[j] % divisorArray[i] === 0) {
+        arrayNumbers.splice(j, 1, wordReplaceArray[i]);
+      }
     }
   }
 
-  for (let j = 0; j < arrayNumbers.length; j++) {
-    console.log(j);
-    if (arrayNumbers[j] % 3 === 0) {
-      console.log("inside loop");
-      arrayNumbers.splice(j, 1, "Fizz");
-    }
-  }
-
-  for (let j = 0; j < arrayNumbers.length; j++) {
-    console.log(j);
-    if (arrayNumbers[j] % 5 === 0) {
-      console.log("inside loop");
-      arrayNumbers.splice(j, 1, "Buzz");
-    }
-  }
   return arrayNumbers;
 };
 
 console.log("Checking....", fizzBomb(17, 93));
-console.log(fizzBomb);
+
 module.exports = fizzBomb;
