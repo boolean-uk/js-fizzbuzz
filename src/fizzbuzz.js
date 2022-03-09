@@ -5,6 +5,7 @@ const fizzBomb = (lowNum, upperNum) => {
   const range = upperNum - lowNum;
   const divisorArray = [15, 3, 5];
   const wordReplaceArray = ["FizzBuzz", "Fizz", "Buzz"];
+
   for (let j = 0; j < range; j++) {
     arrayNumbers.push(lowNum + j);
   }
@@ -24,3 +25,20 @@ const fizzBomb = (lowNum, upperNum) => {
 console.log("Checking....", fizzBomb(17, 93));
 
 module.exports = fizzBomb;
+
+// classmates solution ~ written by Tibor
+
+const fizzBuzz = function (lower, upper) {
+  const fizzBuzzArr = [];
+
+  for (let i = lower; i <= upper; i++) {
+    if (i % 3 === 0 && i % 5 === 0) fizzBuzzArr.push("FizzBuzz");
+    else if (i % 3 === 0) fizzBuzzArr.push("Fizz");
+    else if (i % 5 === 0) fizzBuzzArr.push("Buzz");
+    else {
+      fizzBuzzArr.push(i);
+    }
+  }
+
+  return fizzBuzzArr;
+};
