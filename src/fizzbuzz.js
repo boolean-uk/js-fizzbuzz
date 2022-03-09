@@ -1,20 +1,22 @@
 // TODO: Write your function in this file
 function createFizzBuzz (lower, upper) {
     const outputArray = []
+    
     for (let i = lower; i <= upper; i++) {
-        outputArray.push(i)
 
         if (i % 3 === 0 && i % 5 === 0) {
-            return ("Fizzbuzz")
+            outputArray.push("FizzBuzz")
         } else if (i % 5 === 0) {
-            return ("Buzz")
+            outputArray.push("Buzz")
         } else if (i % 3 === 0) {
-            return ("Fizz")
+            outputArray.push("Fizz")
         } else {
-            return (i)
+            outputArray.push(i)
         }
-    } return outputArray;
-}
+    } 
+
+    return outputArray;
+};
 
 
 // Function containing lower and upper should give us an array
