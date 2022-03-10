@@ -17,5 +17,7 @@ class FizzBuzz {
     return answerArr;
   }
 }
+
 // TODO: Change undefined below to the name of your function
+
 module.exports = FizzBuzz;
