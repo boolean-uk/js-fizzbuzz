@@ -1,25 +1,20 @@
 // TODO: Write your function in this file
 
 class FizzBuzz {
-  constructor(lower, upper) {
-    this.lower = lower;
-    this.upper = upper;
-    this.answerArr = [];
-  }
-
-  createFizzBuzz() {
-    for (let i = this.lower; i <= this.upper; i++) {
+  createFizzBuzz(lower, upper) {
+    const answerArr = [];
+    for (let i = lower; i <= upper; i++) {
       if (i % 15 === 0) {
-        this.answerArr.push("FizzBuzz");
+        answerArr.push("FizzBuzz");
       } else if (i % 3 === 0) {
-        this.answerArr.push("Fizz");
+        answerArr.push("Fizz");
       } else if (i % 5 === 0) {
-        this.answerArr.push("Buzz");
+        answerArr.push("Buzz");
       } else {
-        this.answerArr.push(i);
+        answerArr.push(i);
       }
     }
-    return this.answerArr;
+    return answerArr;
   }
 }
 // TODO: Change undefined below to the name of your function
