@@ -1,25 +1,25 @@
 // TODO: Write your function in this file
-function createFizzBuzz (lower, upper) {
-    const outputArray = []
-    
-    for (let i = lower; i <= upper; i++) {
+class Fizzbuzz {
+    constructor(lower, upper) {
+        this.lower = lower
+        this.upper = upper
+    }
 
-    console.log(i, i % 3, i % 5)
-    
-        if (i % 3 === 0 && i % 5 === 0) {
-            outputArray.push("FizzBuzz")
-        } else if (i % 5 === 0) {
-            outputArray.push("Buzz")
+    outputArray() {
+        for (let i = this.lower; i <= this.upper; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                return "FizzBuzz"
         } else if (i % 3 === 0) {
-            outputArray.push("Fizz")
+            return "Fizz"
+        } else if (i % 5 === 0) {
+            return "Buzz"
         } else {
-            outputArray.push(i)
+            return(i)
         }
-    } 
+    }
+}
 
-    return outputArray;
-};
-
+const fizzbuzz = new Fizzbuzz (lower, upper)
 
 // Function containing lower and upper should give us an array
 // Inside this array there should be:
@@ -30,4 +30,4 @@ function createFizzBuzz (lower, upper) {
 // This means you'll need to use a for loop, a .push to include the results in your array, conditional flow and boolean (true or false).
 
 // TODO: Change undefined below to the name of your function
-module.exports = createFizzBuzz
+module.exports = Fizzbuzz
