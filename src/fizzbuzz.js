@@ -1,26 +1,25 @@
 // TODO: Write your function in this file
-class Fizzbuzz {
-    constructor(lower, upper) {
-        this.lower = lower
-        this.upper = upper
-    }
+function createFizzBuzz (lower, upper) {
+    const outputArray = []
 
-    outputArray() {
-        for (let i = this.lower; i <= this.upper; i++) {
-            if (i % 3 === 0 && i % 5 === 0) {
-                return "FizzBuzz"
-        } else if (i % 3 === 0) {
-            return "Fizz"
-        } else if (i % 5 === 0) {
-            return "Buzz"
-        } else {
-            return(i)
-        }
+    for (let i = lower; i <= upper; i++) {
+
+    console.log(i, i % 3, i % 5) // console.log is for learning purposes
+
+    if (i % 3 === 0 && i % 5 === 0) {
+        outputArray.push("FizzBuzz")
+    } else if (i % 5 === 0) {
+        outputArray.push("Buzz")
+    } else if (i % 3 === 0) {
+        outputArray.push("Fizz") 
+    } else {
+        outputArray.push(i)
     }
 }
 
-const fizzbuzz = new Fizzbuzz (lower, upper)
+return outputArray
 
+}
 // Function containing lower and upper should give us an array
 // Inside this array there should be:
 // 1. A string "Fizz" if a number is a multiple of 3 (3, 6, 9, 12 etc...)
@@ -30,4 +29,4 @@ const fizzbuzz = new Fizzbuzz (lower, upper)
 // This means you'll need to use a for loop, a .push to include the results in your array, conditional flow and boolean (true or false).
 
 // TODO: Change undefined below to the name of your function
-module.exports = Fizzbuzz
+module.exports = createFizzBuzz
