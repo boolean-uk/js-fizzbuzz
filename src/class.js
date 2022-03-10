@@ -1,3 +1,5 @@
+// const { __esModule } = require("console");
+
 class FizzBomb {
   constructor(lowNum, upperNum) {
     this.lowNum = lowNum;
@@ -14,8 +16,8 @@ class FizzBomb {
   }
   replaceNum() {
     const arrayToChange = this.populateArray();
-    const divisorArray = [15, 3, 5, 2];
-    const wordReplaceArray = ["FizzBuzz", "Fizz", "Buzz", "BuzzIng"];
+    const divisorArray = [15, 3, 5];
+    const wordReplaceArray = ["FizzBuzz", "Fizz", "Buzz"];
 
     for (let i = 0; i < divisorArray.length; i++) {
       for (let j = 0; j < arrayToChange.length; j++) {
@@ -32,7 +34,7 @@ class FizzBomb {
 const fizzBomb = new FizzBomb(17, 78);
 console.log(fizzBomb);
 const myArray = fizzBomb.replaceNum(); // let this method do all the work for now
-console.log(myArray);
+// console.log(myArray);
 
 class FizzBombTwo {
   constructor(lowNum, highNum) {
@@ -60,3 +62,5 @@ class FizzBombTwo {
 
 const fizzBombTwo = new FizzBombTwo(17, 78).replaceIntegers();
 // console.log(fizzBombTwo);
+
+module.exports = FizzBomb;
