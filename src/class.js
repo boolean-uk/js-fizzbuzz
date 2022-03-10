@@ -6,7 +6,7 @@ class FizzBomb {
     this.upperNum = upperNum;
   }
 
-  populateArray(lowNum, upperNum) {
+  populateArray() {
     const popArray = [];
     for (let j = this.lowNum; j < this.upperNum + 1; j++) {
       popArray.push(j);
