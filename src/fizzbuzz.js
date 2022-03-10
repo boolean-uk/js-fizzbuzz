@@ -1,8 +1,5 @@
-// TODO: Write your function in this file
-
 function fizzbuzz (lower, upper) {
     let array = [];
-
     for (i = lower; i <= upper; i++){
         if (i % 3 === 0 && i % 5 === 0){
             array.push("FizzBuzz")
@@ -21,7 +18,9 @@ function fizzbuzz (lower, upper) {
 }
 
 
-
-
-// TODO: Change undefined below to the name of your function
 module.exports = fizzbuzz
+
+
+
+
+
