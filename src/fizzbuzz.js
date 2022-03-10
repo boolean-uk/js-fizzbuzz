@@ -1,38 +1,10 @@
 // TODO: Write your function in this file
 
-const fizzBomb = (lowNum, upperNum) => {
-  const arrayNumbers = [];
-  const range = upperNum - lowNum;
-  const divisorArray = [15, 3, 5];
-  const wordReplaceArray = ["FizzBuzz", "Fizz", "Buzz"];
-
-  for (let j = 0; j < range; j++) {
-    arrayNumbers.push(lowNum + j);
-  }
-  arrayNumbers.push(upperNum);
-
-  for (let i = 0; i < divisorArray.length; i++) {
-    for (let j = 0; j < arrayNumbers.length; j++) {
-      if (arrayNumbers[j] % divisorArray[i] === 0) {
-        arrayNumbers.splice(j, 1, wordReplaceArray[i]);
-      }
-    }
-  }
-
-  return arrayNumbers;
-};
-
-console.log("Checking....", fizzBomb(17, 93));
-
-module.exports = fizzBomb;
-
-// classmates solution ~ written by Tibor
-
-const fizzBuzz = function (lower, upper) {
+const fizzBombArr = function (lower, upper) {
   const fizzBuzzArr = [];
 
   for (let i = lower; i <= upper; i++) {
-    if (i % 3 === 0 && i % 5 === 0) fizzBuzzArr.push("FizzBuzz");
+    if (i % 15 === 0) fizzBuzzArr.push("FizzBuzz");
     else if (i % 3 === 0) fizzBuzzArr.push("Fizz");
     else if (i % 5 === 0) fizzBuzzArr.push("Buzz");
     else {
@@ -42,3 +14,5 @@ const fizzBuzz = function (lower, upper) {
 
   return fizzBuzzArr;
 };
+
+module.exports = fizzBombArr;
