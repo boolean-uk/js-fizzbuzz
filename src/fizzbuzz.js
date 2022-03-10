@@ -32,8 +32,8 @@ function fizzBuzz (lower, upper){
             array.push(i);
         }
     }
-    console.log(array)
     return array
+    console.log(array)
 }
 
 // TODO: Change undefined below to the name of your function
