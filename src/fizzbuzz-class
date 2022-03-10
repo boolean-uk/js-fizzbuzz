@@ -29,27 +29,31 @@
 // return result;
 // }
 
-function fizzBuzz(lower, upper) {
-  let result = [];
-
-  for (let i = lower; i <= upper; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      result.push("FizzBuzz");
-    } else if (i % 3 === 0) {
-      result.push("Fizz");
-    } else if (i % 5 === 0) {
-      result.push("Buzz");
-    } else {
-      result.push(i);
-    }
+class FizzBuzz {
+  constructor(lower, upper) {
+    this.lower = lower;
+    this.upper = upper;
+    console.log("in the constructor");
   }
-
-  console.log(result);
-  return result;
+  newArray() {
+    let result = [];
+    for (let i = this.lower; i <= this.upper; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        result.push("FizzBuzz");
+      } else if (i % 3 === 0) {
+        result.push("Fizz");
+      } else if (i % 5 === 0) {
+        result.push("Buzz");
+      } else {
+        result.push(i);
+      }
+    }
+    return result;
+  }
 }
 
 // To show the result in console:
 // Shows the result of the function & the new array []
 
 // TODO: Change undefined below to the name of your function
-module.exports = fizzBuzz;
+module.exports = FizzBuzz;
