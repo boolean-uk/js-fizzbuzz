@@ -33,9 +33,9 @@ const fizzbuzz5 = new Fizzbuzz(4, 6);
 const fizzbuzz6 = new Fizzbuzz(13, 15);
 
 // Display the returned arrays to compare to the expected results
-console.log(fizzbuzz.generateResult());
-console.log(fizzbuzz2.generateResult());
-console.log(fizzbuzz3.generateResult());
-console.log(fizzbuzz4.generateResult());
-console.log(fizzbuzz5.generateResult());
-console.log(fizzbuzz6.generateResult());
+console.log('Expected array:', [1,2], 'Actual:', fizzbuzz.generateResult());
+console.log('Expected array:', ['Fizz', 52, 53, 'Fizz'], 'Actual:', fizzbuzz2.generateResult());
+console.log('Expected array:', [1,2,'Fizz'], 'Actual:', fizzbuzz3.generateResult());
+console.log('Expected array:', ['Fizz','Buzz',11,'Fizz'], 'Actual:', fizzbuzz4.generateResult());
+console.log('Expected array:', [4,'Buzz','Fizz'], 'Actual:', fizzbuzz5.generateResult());
+console.log('Expected array:', [13, 14,'FizzBuzz'], 'Actual:', fizzbuzz6.generateResult());
