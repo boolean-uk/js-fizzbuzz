@@ -6,11 +6,11 @@ class FizzBuzz {
   play() {
     const result = [];
     for (let i = this.lower; i <= this.upper; i++) {
-      if (i % 15 === 0) {
+      if (this.isDivisibleBy(i, 15)) {
         result.push("fizzBuzz");
-      } else if (i % 5 === 0) {
+      } else if (this.isDivisibleBy(i, 5)) {
         result.push("buzz");
-      } else if (i % 3 === 0) {
+      } else if (this.isDivisibleBy(i, 3)) {
         result.push("fizz");
       } else {
         result.push(i);
