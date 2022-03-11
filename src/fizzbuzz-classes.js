@@ -2,26 +2,24 @@ class Fizzbuzz {
     constructor(lower, upper) {
         this.lower = lower
         this.upper = upper
-
-        console.log("in the constructor");
     }
 
-    outputArray() {
-        const array = []
+    play() {
+        const outputArray = []
         for (let i = this.lower; i <= this.upper; i++) {
             if (i % 3 === 0 && i % 5 === 0) {
-                array.push ("FizzBuzz")
+             outputArray.push ("FizzBuzz")
         } else if (i % 3 === 0) {
-            array.push ("Fizz")
+            outputArray.push ("Fizz")
         } else if (i % 5 === 0) {
-            array.push ("Buzz")
+            outputArray.push ("Buzz")
         } else {
-            array.push(i)
+            outputArray.push(i)
         }
-    } return array
+    } return outputArray
 } 
 } 
 
 const fizzbuzz = new Fizzbuzz (1, 150)
 
-console.log(fizzbuzz.outputArray())
+console.log(fizzbuzz.play())
