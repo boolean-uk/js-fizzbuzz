@@ -1,24 +1,39 @@
 // TODO: Write your function in this file
 function fizzBuzz(lower,upper) {
-    let newArray=[];
+    let fizzBuzzArray=[];
     let size=upper-lower;
     size=size+1;
     console.log(size);
-    
-   for (let i=0; i<size; i++){
-        newArray[i]=lower;
-        lower++;
-        if(newArray[i]%3==0&&newArray[i]%5!=0){
-            newArray[i]='Fizz';
-        }else if(newArray[i]%5==0&&newArray[i]%3!=0){
-            newArray[i]='Buzz';
-        }else if(newArray[i]%5==0&&newArray[i]%3==0){
-            newArray[i]='FizzBuzz';
+    let divisorObject={
+        firstDivisor:{
+            divisorValue:3,
+            divisorString:'Fizz'
+        },
+        secondDivisor:{
+            divisorValue:5,
+            divisorString:'Buzz'
         }
-console.log(i+":"+newArray[i]);
+     
+    }
+    const firstDiv=divisorObject.firstDivisor.divisorValue;
+    const firstDivStr=divisorObject.firstDivisor.divisorString;
+    const secondDiv=divisorObject.secondDivisor.divisorValue;
+    const secondDivStr=divisorObject.secondDivisor.divisorString;
+
+   for (let i=0; i<size; i++){
+        fizzBuzzArray[i]=lower;
+        lower++;
+        if(fizzBuzzArray[i]%firstDiv==0&&fizzBuzzArray[i]%secondDiv!=0){
+            fizzBuzzArray[i]=firstDivStr;
+        }else if(fizzBuzzArray[i]%secondDiv==0&&fizzBuzzArray[i]%firstDiv!=0){
+            fizzBuzzArray[i]=secondDivStr;
+        }else if(fizzBuzzArray[i]%firstDiv==0&&fizzBuzzArray[i]%secondDiv==0){
+            fizzBuzzArray[i]=firstDivStr+secondDivStr;
+        }
+console.log(i+":"+fizzBuzzArray[i]);
 
    }
-   return newArray;
+   return fizzBuzzArray;
 }
 // TODO: Change undefined below to the name of your function
 module.exports = fizzBuzz;
