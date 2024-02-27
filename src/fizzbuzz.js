@@ -1,4 +1,21 @@
-// TODO: Write your function in this file
+function fizzBuzz(lower, upper) {
+  let i = lower
+  buzzArr = []
+  while (i <= upper) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      buzzArr.push('FizzBuzz')
+    } else if (i % 3 === 0) {
+      buzzArr.push('Fizz')
+    } else if (i % 5 === 0) {
+      buzzArr.push('Buzz')
+    } else {
+      buzzArr.push(i)
+    }
+    i++
+  }
+  return buzzArr
+}
 
-// TODO: Change undefined below to the name of your function
-module.exports = undefined
+console.log(fizzBuzz(1, 90))
+
+module.exports = fizzBuzz
