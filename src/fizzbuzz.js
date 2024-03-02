@@ -7,52 +7,32 @@
 
 // function fizzBuzz(lower, upper)
 // Input: number
-// Condition: if the number is a multiple of 3 || if number is a multiple of 5 || if number is multiple of 3, 5
+// Condition: if the number is a multiple of 3 || if number is a multiple of 5 || if number is multiple of 3 && 5
 // Output: ['Fizz'] || ['Buzz'] || ['FizzBuzz']
 
 // TODO: Write your function in this file
 
 function fizzBuzz(lower, upper) {
-  const result = [lower, upper]
+  const result = []
   for (let i = lower; i <= upper; i++) {
-    if (multipleOf3([i])) {
-      return result
-    } else if (multipleOf5([i])) {
-      return result
-    } else if (multipleOf35([i])) {
-      return result
+    result.push(i)
+  }
+  const newArr = []
+  for (let i = 0; i < result.length; i++) {
+    if (result[i] % 5 === 0) {
+      newArr.push('Buzz')
+    } else if (result[i] % 3 === 0) {
+      newArr.push('Fizz')
+    } else if (result[i] % 3 === 0 && result[i] % 5 === 0) {
+      newArr.push('FizzBuzz')
+    } else {
+      newArr.push(result[i])
     }
   }
-  return result
+  return newArr
 }
 
-function multipleOf3(num) {
-  let result = []
-  for (let i = 0; i <= num; i++) {
-    if (num[i] / 3 === 0) {
-      result = 'Fizz'
-    }
-  }
-  return result
-}
-function multipleOf5(num) {
-  let result = []
-  for (let i = 0; i <= num; i++) {
-    if (num[i] / 5 === 0) {
-      result = 'Buzz'
-    }
-  }
-  return result
-}
+console.log(fizzBuzz(13, 15))
 
-function multipleOf35(num) {
-  let result = []
-  for (let i = 0; i <= num; i++) {
-    if (num[i] / 3 === 0 && num[i] / 5 === 0) {
-      result = 'FizzBuzz'
-    }
-  }
-  return result
-}
 // TODO: Change undefined below to the name of your function
 module.exports = fizzBuzz
