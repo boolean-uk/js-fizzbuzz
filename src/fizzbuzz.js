@@ -19,14 +19,14 @@ function fizzBuzz(lower, upper) {
   }
   const newArr = []
   for (let i = 0; i < result.length; i++) {
-    if (result[i] % 5 === 0) {
+    if (result[i] % 3 !== 0 && result[i] % 5 !== 0) {
+      newArr.push(result[i])
+    } else if (result[i] % 3 === 0 && result[i] % 5 === 0) {
+      newArr.push('FizzBuzz')
+    } else if (result[i] % 5 === 0) {
       newArr.push('Buzz')
     } else if (result[i] % 3 === 0) {
       newArr.push('Fizz')
-    } else if (result[i] % 3 === 0 && result[i] % 5 === 0) {
-      newArr.push('FizzBuzz')
-    } else {
-      newArr.push(result[i])
     }
   }
   return newArr
